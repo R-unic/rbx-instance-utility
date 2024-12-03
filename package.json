@@ -13,6 +13,9 @@
     "instance",
     "utility"
   ],
+  "repository": {
+    "url": "https://github.com/R-unic/rbx-instance-utility"
+  },
   "author": "runicly",
   "license": "ISC",
   "description": "Utility functions for Roblox instances",
