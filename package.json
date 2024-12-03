@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/instance-utility",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "out/init.lua",
   "scripts": {
     "build": "rbxtsc",
@@ -14,7 +14,7 @@
     "utility"
   ],
   "repository": {
-    "url": "https://github.com/R-unic/rbx-instance-utility"
+    "url": "git+https://github.com/R-unic/rbx-instance-utility.git"
   },
   "author": "runicly",
   "license": "ISC",
