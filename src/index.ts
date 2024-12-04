@@ -37,12 +37,12 @@ export function tween<T extends Instance = Instance>(
 	return tween;
 }
 
-export function getDescendantsOfType<T extends keyof Instances, I extends Instances[T] = Instances[T]>(instance: Instance, className: T): I[] {
-	return instance.GetDescendants().filter((child): child is I => child.IsA(className));
+export function getDescendantsOfType<T extends keyof Instances, I extends Instances[T] = Instances[T]>(instance: Instance, ...classNames: T[]): I[] {
+	return instance.GetDescendants().filter((child): child is I => classNames.some(className => child.IsA(className)));
 }
 
-export function getChildrenOfType<T extends keyof Instances, I extends Instances[T] = Instances[T]>(instance: Instance, className: T): I[] {
-	return instance.GetChildren().filter((child): child is I => child.IsA(className));
+export function getChildrenOfType<T extends keyof Instances, I extends Instances[T] = Instances[T]>(instance: Instance, ...classNames: T[]): I[] {
+	return instance.GetChildren().filter((child): child is I => classNames.some(className => child.IsA(className)));
 }
 
 export function getCharacterParts(character: Model): BasePart[] {
